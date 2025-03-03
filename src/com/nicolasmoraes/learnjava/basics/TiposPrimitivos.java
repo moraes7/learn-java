@@ -13,7 +13,8 @@ public class TiposPrimitivos {
         double Double = 7.777777; // 64 bits => precisão dupla, muitos números após a vírgula
 
         // STRINGS
-        String nome = "Nicolas"; // representa palavras e frases
+        //
+        String nome = "Nicolas"; // representa palavras e frases (String em Java é representado como uma classe e não um tipo primitivo.)
         char n = 'N'; // representa um único caractere
 
         // BOOLEAN
