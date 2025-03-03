@@ -14,7 +14,7 @@ Esse projeto contém códigos que foram criados com objetivo de compreensão do 
 
 ### Básico
 
-| Estudo           | Descrição                             | Pasta ou Arquivo                                                             |
-|------------------|---------------------------------------|------------------------------------------------------------------------------|
-| Tipos Primitivos | Exemplos de tipos primitivos em Java. | [TiposPrimitivos.java](src/com/nicolasmoraes/learnjava/basics/OlaMundo.java) |
+| Estudo           | Descrição                             | Pasta ou Arquivo                                                                    |
+|------------------|---------------------------------------|-------------------------------------------------------------------------------------|
+| Tipos Primitivos | Exemplos de tipos primitivos em Java. | [TiposPrimitivos.java](src/com/nicolasmoraes/learnjava/basics/TiposPrimitivos.java) |
 
