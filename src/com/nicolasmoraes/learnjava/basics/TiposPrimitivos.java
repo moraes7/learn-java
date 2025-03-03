@@ -6,7 +6,7 @@ public class TiposPrimitivos {
         byte Byte = 127; // 8 bits => -128 a 127
         short Short = 32767; // 16 bits => -32.768.000 a 32.767.000
         int Inteiro = 100; // 32 bits => -2.147.483.648 a 2.147.483.647
-        long Long = 1000; // 64 bits => -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807
+        long Long = 1000L; // 64 bits => -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807
 
         // NÚMEROS DECIMAIS
         float Float = 7.77F; // 32 bits => precisão simples, poucos números após a vírgula
