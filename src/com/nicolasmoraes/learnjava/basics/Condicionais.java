@@ -1,5 +1,8 @@
 package com.nicolasmoraes.learnjava.basics;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Condicionais {
     public static void main(String[] args) {
         int age = 60;
@@ -19,6 +22,9 @@ public class Condicionais {
         } else {
             System.out.println("Falso");
         }
+
+
+
 
     }
 }
