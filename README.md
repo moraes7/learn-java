@@ -17,4 +17,5 @@ Esse projeto contém códigos que foram criados com objetivo de compreensão do 
 | Estudo           | Descrição                             | Pasta ou Arquivo                                                                    |
 |------------------|---------------------------------------|-------------------------------------------------------------------------------------|
 | Tipos Primitivos | Exemplos de tipos primitivos em Java. | [TiposPrimitivos.java](src/com/nicolasmoraes/learnjava/basics/TiposPrimitivos.java) |
+| Tipos Primitivos | Exemplos de tipos primitivos em Java. | [TiposPrimitivos.java](src/com/nicolasmoraes/learnjava/basics/TiposPrimitivos.java) |
 
