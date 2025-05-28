@@ -1,6 +1,6 @@
 package com.nicolasmoraes.learnjava.pratica.test;
 
-import com.nicolasmoraes.learnjava.pratica.main.Caneta;
+import com.nicolasmoraes.learnjava.pratica.domain.Caneta;
 
 public class CanetaTest01 {
     public static void main(String[] args) {

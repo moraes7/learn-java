@@ -1,4 +1,4 @@
-package com.nicolasmoraes.learnjava.pratica.main;
+package com.nicolasmoraes.learnjava.pratica.domain;
 // metodo static
 public class Matematica {
     public static int somar(int num1, int num2) {

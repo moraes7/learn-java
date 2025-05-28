@@ -1,6 +1,6 @@
 package com.nicolasmoraes.learnjava.pratica.test;
 
-import com.nicolasmoraes.learnjava.pratica.main.Matematica;
+import com.nicolasmoraes.learnjava.pratica.domain.Matematica;
 
 public class MatematicaTest01 {
     public static void main(String[] args) {

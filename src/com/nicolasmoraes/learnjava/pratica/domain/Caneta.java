@@ -1,4 +1,4 @@
-package com.nicolasmoraes.learnjava.pratica.main;
+package com.nicolasmoraes.learnjava.pratica.domain;
 
 // construtores
 public class Caneta {
