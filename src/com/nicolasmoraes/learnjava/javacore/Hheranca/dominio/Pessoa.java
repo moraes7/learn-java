@@ -1,9 +1,27 @@
 package com.nicolasmoraes.learnjava.javacore.Hheranca.dominio;
 
 public class Pessoa {
-    private String nome;
-    private String cpf;
-    private Endereco endereco;
+    // protected da acesso a todas as subclasses (fora do mesmo pacote)
+    protected String nome;
+    protected String sobrenome;
+    protected String cpf;
+    protected Endereco endereco;
+
+    static {
+        System.out.println("Dentro do bloco de inicialização estático de Pessoa");
+    }
+
+    {
+        System.out.println("Dentro do bloco de inicialização de Pessoa 1");
+    }
+    {
+        System.out.println("Dentro do bloco de inicialização de Pessoa 2");
+    }
+
+    public Pessoa(String nome) {
+        System.out.println("Dentro do construtor de Pessoa");
+        this.nome = nome;
+    }
 
     public void imprime() {
         System.out.println("Nome: "+this.nome);
