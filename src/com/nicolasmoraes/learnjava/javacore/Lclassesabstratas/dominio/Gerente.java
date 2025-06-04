@@ -6,6 +6,11 @@ public class Gerente extends Funcionario{
     }
 
     @Override
+    public void calcularBonus() {
+
+    }
+
+    @Override
     public String toString() {
         return "Gerente{" +
                 "nome='" + nome + '\'' +
