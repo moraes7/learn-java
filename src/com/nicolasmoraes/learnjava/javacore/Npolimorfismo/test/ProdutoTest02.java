@@ -1,4 +1,4 @@
-package com.nicolasmoraes.learnjava.javacore;
+package com.nicolasmoraes.learnjava.javacore.Npolimorfismo.test;
 
 import com.nicolasmoraes.learnjava.javacore.Npolimorfismo.main.Computador;
 import com.nicolasmoraes.learnjava.javacore.Npolimorfismo.main.Produto;
