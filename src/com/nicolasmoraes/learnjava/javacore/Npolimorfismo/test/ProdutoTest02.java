@@ -1,8 +1,8 @@
 package com.nicolasmoraes.learnjava.javacore.Npolimorfismo.test;
 
-import com.nicolasmoraes.learnjava.javacore.Npolimorfismo.main.Computador;
-import com.nicolasmoraes.learnjava.javacore.Npolimorfismo.main.Produto;
-import com.nicolasmoraes.learnjava.javacore.Npolimorfismo.main.Tomate;
+import com.nicolasmoraes.learnjava.javacore.Npolimorfismo.domain.Computador;
+import com.nicolasmoraes.learnjava.javacore.Npolimorfismo.domain.Produto;
+import com.nicolasmoraes.learnjava.javacore.Npolimorfismo.domain.Tomate;
 
 public class ProdutoTest02 {
     public static void main(String[] args) {

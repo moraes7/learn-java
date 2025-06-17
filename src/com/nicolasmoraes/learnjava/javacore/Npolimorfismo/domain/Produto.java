@@ -1,6 +1,6 @@
-package com.nicolasmoraes.learnjava.javacore.Npolimorfismo.main;
+package com.nicolasmoraes.learnjava.javacore.Npolimorfismo.domain;
 
-public abstract class Produto implements Taxavel{
+public abstract class Produto implements Taxavel {
     protected String nome;
     protected double valor;
 

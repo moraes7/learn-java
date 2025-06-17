@@ -1,4 +1,4 @@
-package com.nicolasmoraes.learnjava.javacore.Npolimorfismo.main;
+package com.nicolasmoraes.learnjava.javacore.Npolimorfismo.domain;
 
 public class Tomate extends Produto {
     public static final double IMPOSTO_POR_CENTO = 0.06;

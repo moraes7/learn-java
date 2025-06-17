@@ -1,8 +1,10 @@
-package com.nicolasmoraes.learnjava.javacore.Npolimorfismo.main;
+package com.nicolasmoraes.learnjava.javacore.Npolimorfismo.domain;
 
 public class Televisao extends Produto {
     public static final double IMPOSTO_POR_CENTO = 0.21;
-    public Televisao(String nome, double valor) {
+
+    public Televisao(String nome, double valor)
+    {
         super(nome, valor);
     }
 
@@ -11,4 +13,5 @@ public class Televisao extends Produto {
         System.out.println("Calculando imposto da Televisao...");
         return this.valor * IMPOSTO_POR_CENTO;
     }
+
 }

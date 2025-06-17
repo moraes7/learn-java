@@ -1,8 +1,8 @@
 package com.nicolasmoraes.learnjava.javacore.Npolimorfismo.test;
 
-import com.nicolasmoraes.learnjava.javacore.Npolimorfismo.main.Computador;
-import com.nicolasmoraes.learnjava.javacore.Npolimorfismo.main.Televisao;
-import com.nicolasmoraes.learnjava.javacore.Npolimorfismo.main.Tomate;
+import com.nicolasmoraes.learnjava.javacore.Npolimorfismo.domain.Computador;
+import com.nicolasmoraes.learnjava.javacore.Npolimorfismo.domain.Televisao;
+import com.nicolasmoraes.learnjava.javacore.Npolimorfismo.domain.Tomate;
 import com.nicolasmoraes.learnjava.javacore.Npolimorfismo.servico.CalculadoraImposto;
 
 public class ProdutoTest01 {
