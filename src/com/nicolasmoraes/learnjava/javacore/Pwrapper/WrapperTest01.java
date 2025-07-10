@@ -1,4 +1,4 @@
-package com.nicolasmoraes.learnjava.javacore.wrapper;
+package com.nicolasmoraes.learnjava.javacore.Pwrapper;
 
 public class WrapperTest01 {
     public static void main(String[] args) {
