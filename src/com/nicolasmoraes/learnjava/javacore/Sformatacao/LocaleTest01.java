@@ -1,8 +1,6 @@
-package com.nicolasmoraes.learnjava.javacore.Rdatas.test;
+package com.nicolasmoraes.learnjava.javacore.Sformatacao;
 
 // Classes Utilitárias - Internacionalização Datas com Locale
-
-import com.nicolasmoraes.learnjava.javacore.Gassociacao.ExercicioAssociacao.dominio.Local;
 
 import java.text.DateFormat;
 import java.util.Calendar;
