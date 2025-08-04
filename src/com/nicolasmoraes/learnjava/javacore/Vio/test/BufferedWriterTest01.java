@@ -11,11 +11,11 @@ public class BufferedWriterTest01 {
     public static void main(String[] args) {
         File file = new File("file.txt");
         try (FileWriter fw = new FileWriter(file, true);
-             BufferedWriter br = new BufferedWriter(fw)){
-            br.write("Teste FileWriter");
-            br.newLine(); // não é mais necessario o \n
-            br.write("Outra linha");
-            br.flush();
+             BufferedWriter bw = new BufferedWriter(fw)){
+            bw.write("Teste FileWriter");
+            bw.newLine(); // não é mais necessario o \n
+            bw.write("Outra linha");
+            bw.flush();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
