@@ -23,3 +23,9 @@ Esse projeto contém códigos que foram criados com objetivo de compreensão do 
 | Arrays                   | Exemplos de arrays em Java.                   | [Arrays.java](src/com/nicolasmoraes/learnjava/basics/Arrays.java)                                   |
 | Arrays multidimensionais | Exemplos de arrays multidimensionais em Java. | [ArraysMultidimensionais.java](src/com/nicolasmoraes/learnjava/basics/ArraysMultidimensionais.java) |
 
+### Java Core
+
+| Estudo             | Descrição                      | Pasta ou Arquivo                                                       |
+|--------------------|--------------------------------|------------------------------------------------------------------------|
+| Introdução Classes | Introdução de classes em Java. | [IntroClasses](src/com/nicolasmoraes/learnjava/javacore/Aintroclasses) |
+
