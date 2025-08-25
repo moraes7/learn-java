@@ -1,6 +1,6 @@
 package com.nicolasmoraes.learnjava.basics;
 
-public class AraysMultidimensionais {
+public class ArraysMultidimensionais {
     public static void main(String[] args) {
         // 1,2,3 meses
         int[][] dias = new int[2][3];
