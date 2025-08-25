@@ -37,7 +37,7 @@ Esse projeto contém códigos que foram criados com objetivo de compreensão do 
 | Herança                 | Herança em Java.                 | [Heranca](src/com/nicolasmoraes/learnjava/javacore/Hheranca)                         |
 | Sobrescrita             | Sobrescrita em Java.             | [Sobrescrita](src/com/nicolasmoraes/learnjava/javacore/Isobrescrita)                 |
 | Modificador final       | Modificador final em Java.       | [ModificadorFinal](src/com/nicolasmoraes/learnjava/javacore/Jmodificadorfinal)       |
-| Enumeração              | Enumeração final em Java.        | [Enum](src/com/nicolasmoraes/learnjava/javacore/Kenum)                               |
+| Enumeração              | Enumeração em Java.              | [Enum](src/com/nicolasmoraes/learnjava/javacore/Kenum)                               |
 | Classes Abstratas       | Classes Abstratas em Java.       | [ClassesAbstratas](src/com/nicolasmoraes/learnjava/javacore/Lclassesabstratas)       |
 | Leitura do Teclado      | Scanner em Java.                 | [Scanner](src/com/nicolasmoraes/learnjava/javacore/LeituraDoTeclado)                 |
 | Interfaces              | Interfaces em Java.              | [Interface](src/com/nicolasmoraes/learnjava/javacore/Minterfaces)                    |
