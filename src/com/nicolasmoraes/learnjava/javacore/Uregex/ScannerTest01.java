@@ -1,4 +1,4 @@
-package com.nicolasmoraes.learnjava.javacore.Uregex.test;
+package com.nicolasmoraes.learnjava.javacore.Uregex;
 
 //  Classes Utilitárias - Scanner - Tokens e Delimitadores
 

@@ -1,4 +1,4 @@
-package com.nicolasmoraes.learnjava.javacore.Tresoursebundle.test;
+package com.nicolasmoraes.learnjava.javacore.Tresoursebundle;
 
 // Classes Utilitárias - ResourceBundle
 

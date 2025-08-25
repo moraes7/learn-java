@@ -1,11 +1,11 @@
-package com.nicolasmoraes.learnjava.javacore.Uregex.test;
+package com.nicolasmoraes.learnjava.javacore.Uregex;
 
-// Classes Utilitárias - Regex pt 03 - Pattern e Matcher - Range
+// Classes Utilitárias - Regex pt 04 - Pattern e Matcher - Quantificadores pt 01
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PatternMatcherTest03 {
+public class PatternMatcherTest04 {
     public static void main(String[] args) {
 
         // \d = todos os digitos
@@ -14,11 +14,17 @@ public class PatternMatcherTest03 {
         // \S = todos os caracteres excluindo os brancos
         // \w = todas as letras a-ZA-Z, todos os digitos e underscore _ (exclui caracteres especiais)
         // \W = tudo o que não for incluso no \w
-        // []
+        // [] = range de caracteres
+        // ? = zero ou uma
+        // * = zero ou mais
+        // + = uma ou mais
+        // {n,m} = de n até m
+        // () = agrupamento
+        // | ou =  o(v|c)o ovo | oco
+        // $ = representa o fim da linha
 
-        //String regex = "[a-zcA-E]";
-        String regex = "0[xX][0-9a-fA-F]";
-        String texto = "12 0x 0X 0xFFABC 0x109 0x1";
+        String regex = "0[xX]([0-9a-fA-F])+(\\s|$)";
+        String texto = "12 0x 0X 0xFFABC 0x10G 0x1";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto);
         System.out.println("Texto:  "+texto);
@@ -28,10 +34,11 @@ public class PatternMatcherTest03 {
 
         while (matcher.find()) {
             System.out.print(matcher.start()+" "+matcher.group()+"\n");
+            /*
+            9 0xFFABC
+            23 0x1
+             */
         }
-        /*
-        int numeroHex = 0XFFFFFF;
-        System.out.println(numeroHex);
-         */
+
     }
 }

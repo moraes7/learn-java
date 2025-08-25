@@ -1,4 +1,4 @@
-package com.nicolasmoraes.learnjava.javacore.Vio.test;
+package com.nicolasmoraes.learnjava.javacore.Vio;
 
 // Classes Utilitárias - IO pt 02 - FileWriter
 

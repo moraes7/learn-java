@@ -1,11 +1,13 @@
-package com.nicolasmoraes.learnjava.javacore.Uregex.test;
+package com.nicolasmoraes.learnjava.javacore.Uregex;
 
-// Classes Utilitárias - Regex pt 04 - Pattern e Matcher - Quantificadores pt 01
+// Classes Utilitárias - Regex pt 04 - Pattern e Matcher - Quantificadores pt 02
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PatternMatcherTest04 {
+public class PatternMatcherTest05 {
     public static void main(String[] args) {
 
         // \d = todos os digitos
@@ -22,9 +24,13 @@ public class PatternMatcherTest04 {
         // () = agrupamento
         // | ou =  o(v|c)o ovo | oco
         // $ = representa o fim da linha
+        // . 1.3 = 123, 133, 1@3, 1A3
 
-        String regex = "0[xX]([0-9a-fA-F])+(\\s|$)";
-        String texto = "12 0x 0X 0xFFABC 0x10G 0x1";
+        String regex = "([a-z-A-Z0-9\\._-])+@([a-zA-Z])+(\\.([a-zA-Z])+)+";
+        String texto = "luffy@hotmail.com, 123jotaro@gmail.com, #@!zoro@email.br, teste@gmail.com.br, sakura@mail";
+        System.out.println("Email válido: "+"#@!zoro@email.br".matches(regex)); // false
+        System.out.println(Arrays.toString(texto.split(","))); // [luffy@hotmail.com,  123jotaro@gmail.com,  #@!zoro@email.br,  teste@gmail.com.br,  sakura@mail]
+        System.out.println(texto.split(",")[1].trim()); // 123jotaro@gmail.com (sem o espaço inicial)
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto);
         System.out.println("Texto:  "+texto);
@@ -35,8 +41,10 @@ public class PatternMatcherTest04 {
         while (matcher.find()) {
             System.out.print(matcher.start()+" "+matcher.group()+"\n");
             /*
-            9 0xFFABC
-            23 0x1
+            0 luffy@hotmail.com
+            19 123jotaro@gmail.com
+            43 zoro@email.br
+            58 teste@gmail.com.br
              */
         }
 

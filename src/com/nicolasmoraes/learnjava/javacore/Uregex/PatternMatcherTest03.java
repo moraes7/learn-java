@@ -1,11 +1,11 @@
-package com.nicolasmoraes.learnjava.javacore.Uregex.test;
+package com.nicolasmoraes.learnjava.javacore.Uregex;
 
-// Classes Utilitárias - Regex pt 02 - Pattern e Matcher - Meta caracteres
+// Classes Utilitárias - Regex pt 03 - Pattern e Matcher - Range
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PatternMatcherTest02 {
+public class PatternMatcherTest03 {
     public static void main(String[] args) {
 
         // \d = todos os digitos
@@ -14,9 +14,11 @@ public class PatternMatcherTest02 {
         // \S = todos os caracteres excluindo os brancos
         // \w = todas as letras a-ZA-Z, todos os digitos e underscore _ (exclui caracteres especiais)
         // \W = tudo o que não for incluso no \w
+        // []
 
-        String regex = "\\W";
-        String texto = "@#hdk_ash12 1\thksda42";
+        //String regex = "[a-zcA-E]";
+        String regex = "0[xX][0-9a-fA-F]";
+        String texto = "12 0x 0X 0xFFABC 0x109 0x1";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto);
         System.out.println("Texto:  "+texto);
@@ -25,7 +27,11 @@ public class PatternMatcherTest02 {
         System.out.println("Posições encontradas!");
 
         while (matcher.find()) {
-            System.out.print(matcher.start()+" "+matcher.group()+"\n"); // (0-@), (1-#),(11),(13)
+            System.out.print(matcher.start()+" "+matcher.group()+"\n");
         }
+        /*
+        int numeroHex = 0XFFFFFF;
+        System.out.println(numeroHex);
+         */
     }
 }
