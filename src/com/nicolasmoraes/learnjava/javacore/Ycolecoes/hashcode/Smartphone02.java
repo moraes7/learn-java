@@ -1,4 +1,4 @@
-package com.nicolasmoraes.learnjava.javacore.Ycolecoes.hashcode.dominio;
+package com.nicolasmoraes.learnjava.javacore.Ycolecoes.hashcode;
 
 // Coleções pt 04 - hashCode pt 02
 
