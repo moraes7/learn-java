@@ -51,5 +51,6 @@ Esse projeto contém códigos que foram criados com objetivo de compreensão do 
 | Regex                   | Regex em Java.                   | [Regex](src/com/nicolasmoraes/learnjava/javacore/Uregex)                             |
 | Java IO                 | IO em Java.                      | [IO](src/com/nicolasmoraes/learnjava/javacore/Vio)                                   |
 | Java NIO                | NIO em Java.                     | [NIO](src/com/nicolasmoraes/learnjava/javacore/Wnio)                                 |
-| Serialização            | Serialização em Java.            | [Sereializacao](src/com/nicolasmoraes/learnjava/javacore/Xserializacao)              |
+| Serialização            | Serialização em Java.            | [Serialização](src/com/nicolasmoraes/learnjava/javacore/Xserializacao)               |
+| Coleções                | Coleções em Java.                | [Coleções](src/com/nicolasmoraes/learnjava/javacore/Ycolecoes)                       |
 
