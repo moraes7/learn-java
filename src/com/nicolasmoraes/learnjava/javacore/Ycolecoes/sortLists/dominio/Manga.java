@@ -4,30 +4,30 @@ package com.nicolasmoraes.learnjava.javacore.Ycolecoes.sortLists.dominio;
 
 import java.util.Objects;
 
-public class Manga {
+public class Manga implements Comparable<Manga>{
 
     private Long id;
     private String name;
-    private double price;
+    private int dataPublicacao;
 
-    public Manga(Long id, String name, double price) {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(name);
+    public Manga(Long id, String name, int dataPublicacao) {
+        Objects.requireNonNull(id, "ID não pode ser nulo");
+        Objects.requireNonNull(name, "Name não pode ser nulo");
         this.id = id;
         this.name = name;
-        this.price = price;
+        this.dataPublicacao = dataPublicacao;
     }
 
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Manga manga = (Manga) o;
-        return Double.compare(price, manga.price) == 0 && Objects.equals(id, manga.id) && Objects.equals(name, manga.name);
+        return dataPublicacao == manga.dataPublicacao && Objects.equals(id, manga.id) && Objects.equals(name, manga.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, price);
+        return Objects.hash(id, name, dataPublicacao);
     }
 
     @Override
@@ -35,7 +35,7 @@ public class Manga {
         return "Manga{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", price=" + price +
+                ", dataPublicacao=" + dataPublicacao +
                 '}';
     }
 
@@ -55,11 +55,34 @@ public class Manga {
         this.name = name;
     }
 
-    public double getPrice() {
-        return price;
+    public int getDataPublicacao() {
+        return dataPublicacao;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setDataPublicacao(int dataPublicacao) {
+        this.dataPublicacao = dataPublicacao;
+    }
+
+    @Override
+    public int compareTo(Manga outroManga) {
+        // retorna negativo se o this < outroManga
+        // retorna 0 se this == outroManga
+        // retorna positivo se this > outroManga
+        /*if (this.id < outroManga.getId()) {
+            return -1;
+        } else if (this.id.equals(outroManga.getId())) {
+            return 0;
+        } else {
+            return 1;
+        }*/
+
+        // retornar por id (id está com wrapper)
+        //return this.id.compareTo(outroManga.getId());
+
+        // retornar por data de publicaçao
+        return Integer.compare(dataPublicacao, outroManga.getDataPublicacao());
+
+        // retornar por ordem alfabetica (string)
+        //return this.name.compareTo(outroManga.getName());
     }
 }
