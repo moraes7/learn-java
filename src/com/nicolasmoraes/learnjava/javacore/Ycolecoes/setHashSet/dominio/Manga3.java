@@ -95,9 +95,9 @@ public class Manga3 implements Comparable<Manga3>{
         //return this.id.compareTo(outroManga.getId());
 
         // retornar por data de publicaçao
-        return Integer.compare(dataPublicacao, outroManga.getDataPublicacao());
+        //return Integer.compare(dataPublicacao, outroManga.getDataPublicacao());
 
         // retornar por ordem alfabetica (string)
-        //return this.name.compareTo(outroManga.getName());
+        return this.name.compareTo(outroManga.getName());
     }
 }
