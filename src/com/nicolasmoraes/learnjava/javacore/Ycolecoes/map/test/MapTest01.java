@@ -1,4 +1,4 @@
-package com.nicolasmoraes.learnjava.javacore.Ycolecoes.map;
+package com.nicolasmoraes.learnjava.javacore.Ycolecoes.map.test;
 
 // Coleções pt 18 - Map, HashMap, LinkedHashMap pt 01
 
