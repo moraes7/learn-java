@@ -1,4 +1,4 @@
-package com.nicolasmoraes.learnjava.javacore.Zgenerics;
+package com.nicolasmoraes.learnjava.javacore.Zgenerics.test;
 
 // Generics pt 02 - Wildcard pt 01 e pt 02
 
