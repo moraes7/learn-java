@@ -53,5 +53,5 @@ Esse projeto contém códigos que foram criados com objetivo de compreensão do 
 | Java NIO                | NIO em Java.                     | [NIO](src/com/nicolasmoraes/learnjava/javacore/Wnio)                                 |
 | Serialização            | Serialização em Java.            | [Serialização](src/com/nicolasmoraes/learnjava/javacore/Xserializacao)               |
 | Coleções                | Coleções em Java.                | [Coleções](src/com/nicolasmoraes/learnjava/javacore/Ycolecoes)                       |
-| Generics                | Generics em Java.                | [Generics](src/com/nicolasmoraes/learnjava/javacore/Zgenerics)                       |
+| Generics                | Tipos Genéricos em Java.         | [Generics](src/com/nicolasmoraes/learnjava/javacore/Zgenerics)                       |
 
