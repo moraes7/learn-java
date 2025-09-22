@@ -54,4 +54,5 @@ Esse projeto contém códigos que foram criados com objetivo de compreensão do 
 | Serialização            | Serialização em Java.            | [Serialização](src/com/nicolasmoraes/learnjava/javacore/Xserializacao)               |
 | Coleções                | Coleções em Java.                | [Coleções](src/com/nicolasmoraes/learnjava/javacore/Ycolecoes)                       |
 | Generics                | Tipos Genéricos em Java.         | [Generics](src/com/nicolasmoraes/learnjava/javacore/Zgenerics)                       |
+| Classes Internas        | Classes Internas em Java.        | [ClassesInternas](src/com/nicolasmoraes/learnjava/javacore/ZZAclassesinternas)       |
 
