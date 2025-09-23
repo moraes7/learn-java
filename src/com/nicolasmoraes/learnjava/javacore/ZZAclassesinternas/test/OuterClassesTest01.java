@@ -5,6 +5,7 @@ package com.nicolasmoraes.learnjava.javacore.ZZAclassesinternas.test;
 public class OuterClassesTest01 {
     private String name = "Monkey D. Luffy";
 
+    // Nested classes
     class Inner {
         public void printOuterClassAttribute() {
             System.out.println(name);
