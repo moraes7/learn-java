@@ -15,4 +15,8 @@ public class Barco {
                 "tipo='" + tipo + '\'' +
                 '}';
     }
+
+    public String getTipo() {
+        return tipo;
+    }
 }
