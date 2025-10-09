@@ -59,4 +59,5 @@ Esse projeto contém códigos que foram criados com objetivo de compreensão do 
 | Lambdas                       | Lambdas em Java.                       | [Lambdas](src/com/nicolasmoraes/learnjava/javacore/ZZClambdas)                                         |
 | Method Reference              | Method Reference em Java.              | [MethodReference](src/com/nicolasmoraes/learnjava/javacore/ZZClambdas/test/MethodReferenceTest01.java) |
 | Optional                      | Optional em Java.                      | [Optional](src/com/nicolasmoraes/learnjava/javacore/ZZDoptional)                                       |
+| Streams                       | Streams em Java.                       | [Streams](src/com/nicolasmoraes/learnjava/javacore/ZZEstreams)                                         |
 

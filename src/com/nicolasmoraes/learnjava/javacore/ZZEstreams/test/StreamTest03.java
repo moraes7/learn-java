@@ -1,6 +1,6 @@
 package com.nicolasmoraes.learnjava.javacore.ZZEstreams.test;
 
-// Streams pt 02 - Introduction pt 02
+// Streams pt 03 - Introduction pt 03
 
 import com.nicolasmoraes.learnjava.javacore.ZZEstreams.dominio.LightNovel;
 
