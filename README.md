@@ -57,5 +57,6 @@ Esse projeto contém códigos que foram criados com objetivo de compreensão do 
 | Classes Internas              | Classes Internas em Java.              | [ClassesInternas](src/com/nicolasmoraes/learnjava/javacore/ZZAclassesinternas)                         |
 | Parametrizando Comportamentos | Parametrizando Comportamentos em Java. | [ParametrizandoComportamentos](src/com/nicolasmoraes/learnjava/javacore/ZZBcomportamento)              |
 | Lambdas                       | Lambdas em Java.                       | [Lambdas](src/com/nicolasmoraes/learnjava/javacore/ZZClambdas)                                         |
-| Method Reference              | Method Reference em Java.                       | [MethodReference](src/com/nicolasmoraes/learnjava/javacore/ZZClambdas/test/MethodReferenceTest01.java) |
+| Method Reference              | Method Reference em Java.              | [MethodReference](src/com/nicolasmoraes/learnjava/javacore/ZZClambdas/test/MethodReferenceTest01.java) |
+| Optional                      | Optional em Java.                      | [Optional](src/com/nicolasmoraes/learnjava/javacore/ZZDoptional)                                       |
 
