@@ -1,2 +1,4 @@
 Teste FileWriter
+Java é legal
 Outra linha
+Java é muito legal
