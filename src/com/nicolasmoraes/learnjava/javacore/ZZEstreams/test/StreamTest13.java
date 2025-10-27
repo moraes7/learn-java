@@ -1,6 +1,6 @@
 package com.nicolasmoraes.learnjava.javacore.ZZEstreams.test;
 
-// Streams pt 12 - Collectors pt 03 - Grouping by pt 02
+// Streams pt 13 - Collectors pt 03 - Grouping by pt 02
 
 import com.nicolasmoraes.learnjava.javacore.ZZEstreams.dominio.Category;
 import com.nicolasmoraes.learnjava.javacore.ZZEstreams.dominio.LightNovel;
