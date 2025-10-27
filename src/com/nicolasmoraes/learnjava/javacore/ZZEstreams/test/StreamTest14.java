@@ -1,17 +1,15 @@
 package com.nicolasmoraes.learnjava.javacore.ZZEstreams.test;
 
-// Streams pt 13 - Collectors pt 03 - Grouping by pt 02
+// Streams pt 14 - Collectors pt 04 - Grouping by pt 03
 
 import com.nicolasmoraes.learnjava.javacore.ZZEstreams.dominio.Category;
 import com.nicolasmoraes.learnjava.javacore.ZZEstreams.dominio.LightNovel;
 import com.nicolasmoraes.learnjava.javacore.ZZEstreams.dominio.Promotion;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
-public class StreamTest13 {
+public class StreamTest14 {
     private static List<LightNovel> lightNovels = new ArrayList<>(List.of(
             new LightNovel("Tensei Shittara", 8.99, Category.FANTASY),
             new LightNovel("Overlord", 10.99, Category.FANTASY),
@@ -23,14 +21,17 @@ public class StreamTest13 {
     ));
 
     public static void main(String[] args) {
-        // Agrupando Light Novel em promoção e com preço normal
-        Map<Promotion, List<LightNovel>> collect = lightNovels.stream().collect(Collectors.groupingBy(ln -> ln.getPrice() < 6 ? Promotion.UNDER_PROMOTION : Promotion.NORMAL_PRICE));
+        // Contando quantas Light Novel tem por categoria
+        Map<Category, Long> collect = lightNovels.stream().collect(Collectors.groupingBy(LightNovel::getCategory, Collectors.counting()));
         System.out.println(collect);
 
-        // Agrupando Light Novel em promoção e preços normais dentro de cada categoria
-        Map<Category, Map<Promotion, List<LightNovel>>> collect1 = lightNovels.stream().collect(Collectors.groupingBy(LightNovel::getCategory, Collectors.groupingBy(ln -> ln.getPrice() < 6 ? Promotion.UNDER_PROMOTION : Promotion.NORMAL_PRICE)));
+        // Coletando o maior preço por categoria
+        Map<Category, Optional<LightNovel>> collect1 = lightNovels.stream().collect(Collectors.groupingBy(LightNovel::getCategory, Collectors.maxBy(Comparator.comparing(LightNovel::getPrice))));
         System.out.println(collect1);
 
+        // Tirando o LightNovel dentro do Optional usando collectingAndThen
+        Map<Category, LightNovel> collect2 = lightNovels.stream().collect(Collectors.groupingBy(LightNovel::getCategory, Collectors.collectingAndThen(Collectors.maxBy(Comparator.comparing(LightNovel::getPrice)), Optional::get)));
+        System.out.println(collect2);
 
     }
 }
