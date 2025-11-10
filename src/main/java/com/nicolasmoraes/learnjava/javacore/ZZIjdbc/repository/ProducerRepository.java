@@ -75,14 +75,13 @@ public class ProducerRepository {
     }
 
     // showProducerMetadata
-    public static void showProducerMetadata()  {
-        log.info("Showing Producer Metadata");
+    public static void showProducerMetaData()  {
+        log.info("Showing Producer MetaData");
         String sql = "SELECT * FROM anime_store.producer";
         try(Connection conn = ConnectionFactory.getConnection();
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sql)) {
             ResultSetMetaData rsMetaData = rs.getMetaData();
-            rs.next();
             int columnCount = rsMetaData.getColumnCount();
             log.info("Colums count '{}'", columnCount);
             for (int i = 1; i <= columnCount ; i++) {
@@ -90,6 +89,35 @@ public class ProducerRepository {
                 log.info("Column name '{}'", rsMetaData.getColumnName(i));
                 log.info("Column size '{}'", rsMetaData.getColumnDisplaySize(i));
                 log.info("Column type '{}'", rsMetaData.getColumnTypeName(i));
+            }
+        } catch (SQLException e) {
+            log.error("Error while trying to find all Producers", e);
+        }
+    }
+
+    // showDriverMetaData
+    public static void showDriverMetaData()  {
+        log.info("Showing Driver Metadata");
+        String sql = "SELECT * FROM anime_store.producer";
+        try(Connection conn = ConnectionFactory.getConnection()) {
+            DatabaseMetaData dpMetaData = conn.getMetaData();
+            if (dpMetaData.supportsResultSetType(ResultSet.TYPE_FORWARD_ONLY)) {
+                log.info("Supports TYPE_FOWARD_ONY");
+                if (dpMetaData.supportsResultSetConcurrency(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE)) {
+                    log.info("And Supports CONCUR_UPDATABLE");
+                }
+            }
+            if (dpMetaData.supportsResultSetType(ResultSet.TYPE_SCROLL_INSENSITIVE)) {
+                log.info("Supports TYPE_SCROLL_INSENSITIVE");
+                if (dpMetaData.supportsResultSetConcurrency(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
+                    log.info("And Supports CONCUR_UPDATABLE");
+                }
+            }
+            if (dpMetaData.supportsResultSetType(ResultSet.TYPE_SCROLL_SENSITIVE)) {
+                log.info("Supports TYPE_SCROLL_SENSITIVE");
+                if (dpMetaData.supportsResultSetConcurrency(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
+                    log.info("And Supports CONCUR_UPDATABLE");
+                }
             }
         } catch (SQLException e) {
             log.error("Error while trying to find all Producers", e);
