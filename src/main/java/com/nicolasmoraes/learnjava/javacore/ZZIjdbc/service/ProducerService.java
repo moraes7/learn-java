@@ -23,6 +23,12 @@ public class ProducerService {
         ProducerRepository.update(producer);
     }
 
+    // updatePreparedStatement
+    public static void updatePrepareStatement(Producer producer) {
+        requireValidId(producer.getId());
+        ProducerRepository.updatePrepareStatement(producer);
+    }
+
     // findAll
     public static List<Producer> findAll() {
         return ProducerRepository.findAll();

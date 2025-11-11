@@ -46,6 +46,25 @@ public class ProducerRepository {
         }
     }
 
+    // updatePreparedStatement
+    public static void updatePrepareStatement(Producer producer)  {
+        try(Connection conn = ConnectionFactory.getConnection();
+            PreparedStatement ps = preparedStatementUpdate(conn, producer)) {
+            int rowsAffected = ps.executeUpdate();
+            log.info("Updated producer '{}', rows affected '{}'", producer.getId(), rowsAffected);
+        } catch (SQLException e) {
+            log.error("Error while trying to delete producer '{}'", producer.getId(), e);
+        }
+    }
+
+    private static PreparedStatement preparedStatementUpdate(Connection conn, Producer producer) throws SQLException {
+        String sql = "UPDATE `anime_store`.`producer` SET `name` = ? WHERE (`id` = ?);";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setString(1, producer.getName());
+        ps.setInt(2, producer.getId());
+        return ps;
+    }
+
     // findAll
     public static List<Producer> findAll()  {
         log.info("Find all Producers");
@@ -77,10 +96,9 @@ public class ProducerRepository {
     // findByNamePreparedStatement
     public static List<Producer> findByNamePreparedStatement(String name)  {
         log.info("Find Producers by name");
-        String sql = "SELECT * FROM anime_store.producer where name like CONCAT('%',?,'%');";
         List<Producer> producers = new ArrayList<>();
         try(Connection conn = ConnectionFactory.getConnection();
-            PreparedStatement ps = createdPreparedStatement(conn, sql, name);
+            PreparedStatement ps = preparedStatementFindByName(conn, name);
             ResultSet rs = ps.executeQuery()) {
              while (rs.next()) {
                  Producer producer = Producer
@@ -96,7 +114,8 @@ public class ProducerRepository {
         return producers;
     }
 
-    private static PreparedStatement createdPreparedStatement(Connection conn, String sql, String name) throws SQLException {
+    private static PreparedStatement preparedStatementFindByName(Connection conn, String name) throws SQLException {
+        String sql = "SELECT * FROM anime_store.producer where name like CONCAT('%',?,'%');";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setString(1, name);
         return ps;
