@@ -20,6 +20,8 @@ public class ConnectionFactoryTest01  {
 //        log.info("Producers found '{}'", producers);
 //        ProducerService.showProducerMetaData();
 //        ProducerService.showDriverMetaData();
-        ProducerService.showTypeScrollWorking();
+//        ProducerService.showTypeScrollWorking();
+        List<Producer> byNameAndUpdateToUpperCase = ProducerService.findByNameAndUpdateToUpperCase("Deen");
+        log.info("Producers found '{}'", byNameAndUpdateToUpperCase);
     }
 }
