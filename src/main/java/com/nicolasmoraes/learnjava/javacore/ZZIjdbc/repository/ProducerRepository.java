@@ -55,7 +55,7 @@ public class ProducerRepository {
     // findByName
     public static List<Producer> findByName(String name)  {
         log.info("Find Producers by name");
-        String sql = "SELECT * FROM anime_store.producer WHERE name LIKE '%%%s%%'".formatted(name);
+        String sql = "SELECT * FROM anime_store.producer WHERE name LIKE '%%%s%%';".formatted(name);
         List<Producer> producers = new ArrayList<>();
         try(Connection conn = ConnectionFactory.getConnection();
             Statement stmt = conn.createStatement();
@@ -72,6 +72,34 @@ public class ProducerRepository {
             log.error("Error while trying to find all Producers", e);
         }
         return producers;
+    }
+
+    // findByNamePreparedStatement
+    public static List<Producer> findByNamePreparedStatement(String name)  {
+        log.info("Find Producers by name");
+        String sql = "SELECT * FROM anime_store.producer where name like CONCAT('%',?,'%');";
+        List<Producer> producers = new ArrayList<>();
+        try(Connection conn = ConnectionFactory.getConnection();
+            PreparedStatement ps = createdPreparedStatement(conn, sql, name);
+            ResultSet rs = ps.executeQuery()) {
+             while (rs.next()) {
+                 Producer producer = Producer
+                         .builder()
+                         .id(rs.getInt("id"))
+                         .name(rs.getString("name"))
+                         .build();
+                 producers.add(producer);
+             }
+        } catch (SQLException e) {
+            log.error("Error while trying to find all Producers", e);
+        }
+        return producers;
+    }
+
+    private static PreparedStatement createdPreparedStatement(Connection conn, String sql, String name) throws SQLException {
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setString(1, name);
+        return ps;
     }
 
     // showProducerMetadata

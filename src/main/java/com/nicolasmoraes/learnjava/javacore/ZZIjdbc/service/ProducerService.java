@@ -33,6 +33,11 @@ public class ProducerService {
         return ProducerRepository.findByName(name);
     }
 
+    // findByNamePreparedStatement
+    public static List<Producer> findByNamePreparedStatement(String name) {
+        return ProducerRepository.findByNamePreparedStatement(name);
+    }
+
     // showProducerMetaData
     public static void showProducerMetaData() {
         ProducerRepository.showProducerMetaData();
