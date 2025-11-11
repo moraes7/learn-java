@@ -21,7 +21,9 @@ public class ConnectionFactoryTest01  {
 //        ProducerService.showProducerMetaData();
 //        ProducerService.showDriverMetaData();
 //        ProducerService.showTypeScrollWorking();
-        List<Producer> byNameAndUpdateToUpperCase = ProducerService.findByNameAndUpdateToUpperCase("Deen");
-        log.info("Producers found '{}'", byNameAndUpdateToUpperCase);
+//        List<Producer> byNameAndUpdateToUpperCase = ProducerService.findByNameAndUpdateToUpperCase("Deen");
+//        List<Producer> byNameAndUpdateToUpperCase = ProducerService.findByNameAndInsertWhenNotFound("A-1 Pictures");
+//        log.info("Producers found '{}'", byNameAndUpdateToUpperCase);
+        ProducerService.findByNameAndDelete("A-1 Pictures");
     }
 }
