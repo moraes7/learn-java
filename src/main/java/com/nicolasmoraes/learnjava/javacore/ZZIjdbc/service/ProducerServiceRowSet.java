@@ -10,4 +10,8 @@ public class ProducerServiceRowSet {
     public static List<Producer> findByNameJdbcRowSet(String name) {
         return ProducerRepositoryRowSet.findByNameJdbcRowSet(name);
     }
+
+    public static void updateByNameJdbcRowSet(Producer producer) {
+        ProducerRepositoryRowSet.updateByNameJdbcRowSet(producer);
+    }
 }
