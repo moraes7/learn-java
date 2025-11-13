@@ -6,9 +6,14 @@ import com.nicolasmoraes.learnjava.javacore.ZZIjdbc.repository.ProducerRepositor
 import java.util.List;
 
 public class ProducerService {
-    // insert
+    // save
     public static void save(Producer producer) {
         ProducerRepository.save(producer);
+    }
+
+    // saveTransaction
+    public static void saveTransaction(List<Producer> producers) {
+        ProducerRepository.saveTransaction(producers);
     }
 
     // delete
