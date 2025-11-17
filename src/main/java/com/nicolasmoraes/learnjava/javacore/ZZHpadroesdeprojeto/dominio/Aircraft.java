@@ -21,4 +21,8 @@ public final class Aircraft {
     public boolean bookSeat(String seat) {
         return availableSeats.remove(seat);
     }
+
+    public String getName() {
+        return name;
+    }
 }
