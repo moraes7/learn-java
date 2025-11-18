@@ -4,10 +4,7 @@ import com.nicolasmoraes.learnjava.javacore.ZZJcrud.conn.ConnectionFactory;
 import com.nicolasmoraes.learnjava.javacore.ZZJcrud.dominio.Producer;
 import lombok.extern.log4j.Log4j2;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,6 +55,26 @@ public class ProducerRepository {
         String sql = "DELETE FROM `anime_store`.`producer` WHERE (`id` = ?);";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setInt(1, id);
+        return ps;
+    }
+
+
+    // save
+    public static void save(Producer producer)  {
+        log.info("Saving Producers '{}'", producer);
+        try(Connection conn = ConnectionFactory.getConnection();
+            PreparedStatement ps = createPrepareStatementSave(conn, producer)) {
+            ps.execute();
+        } catch (SQLException e) {
+            log.error("Error while trying to save producer '{}'", producer.getId(), e);
+        }
+    }
+
+    // save
+    private static PreparedStatement createPrepareStatementSave(Connection conn, Producer producer) throws SQLException {
+        String sql = "INSERT INTO `anime_store`.`producer` (`name`) VALUES (?);";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setString(1, producer.getName());
         return ps;
     }
 }
