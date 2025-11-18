@@ -62,4 +62,5 @@ Esse projeto contém códigos que foram criados com objetivo de compreensão do 
 | Streams                       | Streams em Java.                       | [Streams](src/main/java/com/nicolasmoraes/learnjava/javacore/ZZEstreams)                                         |
 | Padrões de Projeto            | Padrões de Projeto em Java.            | [PadroesDeProjeto](src/main/java/com/nicolasmoraes/learnjava/javacore/ZZHpadroesdeprojeto)                       |
 | JDBC                          | Java JDBC.                             | [JDBC](src/main/java/com/nicolasmoraes/learnjava/javacore/ZZIjdbc)                                               |
+| CRUD                          | CRUD em Java.                          | [CRUD](src/main/java/com/nicolasmoraes/learnjava/javacore/ZZJcrud)                                               |
 
