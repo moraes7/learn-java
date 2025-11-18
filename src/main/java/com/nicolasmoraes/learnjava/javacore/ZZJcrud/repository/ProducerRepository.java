@@ -13,12 +13,13 @@ import java.util.List;
 
 @Log4j2
 public class ProducerRepository {
-    public static List<Producer> findByName(String name)  {
+    // find
+    public static List<Producer> findByName(String name) {
         log.info("Find Producers by name '{}'", name);
         List<Producer> producers = new ArrayList<>();
-        try(Connection conn = ConnectionFactory.getConnection();
-            PreparedStatement ps = createPrepareStatementFindByName(conn, name);
-            ResultSet rs = ps.executeQuery()) {
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement ps = createPrepareStatementFindByName(conn, name);
+             ResultSet rs = ps.executeQuery()) {
             while (rs.next()) {
                 Producer producer = Producer
                         .builder()
@@ -33,10 +34,30 @@ public class ProducerRepository {
         return producers;
     }
 
+    // find
     private static PreparedStatement createPrepareStatementFindByName(Connection conn, String name) throws SQLException {
         String sql = "SELECT * FROM anime_store.producer where name like ?;";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setString(1, String.format("%%%s%%", name));
+        return ps;
+    }
+
+    // delete
+    public static void delete(int id) {
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement ps = createPrepareStatementDelete(conn, id)) {
+            ps.execute();
+            log.info("Deleted producer '{}' from the database", id);
+        } catch (SQLException e) {
+            log.error("Error while trying to delete producer '{}'", id, e);
+        }
+    }
+
+    // delete
+    private static PreparedStatement createPrepareStatementDelete(Connection conn, Integer id) throws SQLException {
+        String sql = "DELETE FROM `anime_store`.`producer` WHERE (`id` = ?);";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setInt(1, id);
         return ps;
     }
 }
